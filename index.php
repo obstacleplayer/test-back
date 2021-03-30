@@ -14,4 +14,4 @@ $app->get('/hello/{name}',
     });
 
 $app->run();
-?>
+
