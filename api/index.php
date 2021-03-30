@@ -7,7 +7,7 @@ require __DIR__ . '../vendor/autoload.php';
 $app = AppFactory::create();
 
 $app->get('/hello/{name}',
-    function (Request $resquest, Response $response,$args) {
+    function (Request $request, Response $response,$args) {
         $array = array('nom' => $args['name']);
 
         return $response->getBody()->write(json_encode($array));
@@ -15,5 +15,4 @@ $app->get('/hello/{name}',
 
     });
 
-$app->run();
-
+$app->addRoutingMiddleware();
