@@ -1,0 +1,17 @@
+{
+  "name": "vendor_name/untitled2",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "adem",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    "slim/slim": "^4.0",
+    "slim/psr7": "^1.2",
+    "ext-json": "*"
+  }
+}
