@@ -7,9 +7,9 @@ namespace Composer\Autoload;
 class ComposerStaticInitb2ef9f2bdcdf5576e5aba0e26fcacde6
 {
     public static $files = array (
-        'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
-        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
+        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
+        'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -21,10 +21,12 @@ class ComposerStaticInitb2ef9f2bdcdf5576e5aba0e26fcacde6
         ),
         'P' => 
         array (
-            'Psr\\Log\\' => 8,
-            'Psr\\Http\\Server\\' => 16,
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
+        ),
+        'I' => 
+        array (
+            'Interop\\Container\\' => 18,
         ),
         'F' => 
         array (
@@ -46,23 +48,18 @@ class ComposerStaticInitb2ef9f2bdcdf5576e5aba0e26fcacde6
         array (
             0 => __DIR__ . '/..' . '/slim/slim/Slim',
         ),
-        'Psr\\Log\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
-        ),
-        'Psr\\Http\\Server\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/http-server-handler/src',
-            1 => __DIR__ . '/..' . '/psr/http-server-middleware/src',
-        ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
+        'Interop\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/container-interop/container-interop/src/Interop/Container',
         ),
         'Fig\\Http\\Message\\' => 
         array (
@@ -71,6 +68,16 @@ class ComposerStaticInitb2ef9f2bdcdf5576e5aba0e26fcacde6
         'FastRoute\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/fast-route/src',
+        ),
+    );
+
+    public static $prefixesPsr0 = array (
+        'P' => 
+        array (
+            'Pimple' => 
+            array (
+                0 => __DIR__ . '/..' . '/pimple/pimple/src',
+            ),
         ),
     );
 
@@ -87,6 +94,7 @@ class ComposerStaticInitb2ef9f2bdcdf5576e5aba0e26fcacde6
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitb2ef9f2bdcdf5576e5aba0e26fcacde6::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitb2ef9f2bdcdf5576e5aba0e26fcacde6::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitb2ef9f2bdcdf5576e5aba0e26fcacde6::$prefixesPsr0;
             $loader->classMap = ComposerStaticInitb2ef9f2bdcdf5576e5aba0e26fcacde6::$classMap;
 
         }, null, ClassLoader::class);
